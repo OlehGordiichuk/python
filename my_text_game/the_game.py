@@ -17,6 +17,7 @@ while health>0:
 		else:
 			print('бій коштував вам трохи здоровя! здоровя поменшало на {} одиниць'.format (damage))
 
+		
 		health = health - damage
 
 	elif answer.lower() == 'n' or answer.lower() == 'no' :
@@ -27,14 +28,13 @@ while health>0:
                         print('Що ж, втеча коштувала вам трохи здоровя! і його поменшало поменшало на {} одиниць'.format (damage))
 		health = health - damage
 	else:
-		print('хто не відповідає аккуратно і прfвильно той гру  не грає')
-		sys.exit()
+		print('хто не відповідає аккуратно і правильно той гру  не грає')
+		sys.exit(1)
 	
 	print('Рівень здоровя:{} одиниць'.format(health))
-
+	print('ОГО!!   НОВИЙ МОНСТР!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
 else:
 	print('you dead')
 
 print('game over')
-
-
+print('*************************************************')

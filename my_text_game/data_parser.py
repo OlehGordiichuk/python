@@ -1,14 +1,15 @@
 import xml.etree.ElementTree as etree
-#print(dir(etree))
-file_for_parse = 'data.xml'
-tree =  etree.parse(file_for_parse)
-root = tree.getroot()
-#print(root.tag)
-#print(len(root))
 
-#questlist = []
+file_default = 'data.xml'
 
-#for child in root:
-#	print(child.text)
-#	questlist.append(child.text)
-#print(questlist)
+myfile = open('alternative_path', 'r')
+alternative_file = myfile.read()
+
+
+if len(alternative_file) == 0: 
+	tree =  etree.parse(file_default)
+	root = tree.getroot()
+else:
+	tree =  etree.parse(alternative_file)
+	root = tree.getroot()
+
